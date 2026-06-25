@@ -15,7 +15,7 @@ Designing and shipping high-performance products end to end — from UX to produ
 ### 🧩 About me
 
 - 🎨 &nbsp;I design **and** build — product/UX design through to full-stack TypeScript.
-- ⚡ &nbsp;Currently building **[ZeroSprint](https://zer0sprint.com)** — high-performance design tooling.
+- ⚡ &nbsp;Focused on fast, thoughtful products with clean, accessible UX.
 - 🛠️ &nbsp;My toolkit: TypeScript · React · Node / Express · PostgreSQL + Drizzle · Zod · Figma
 - 📫 &nbsp;Reach me at **qureshi.ux@gmail.com**
 
@@ -39,6 +39,6 @@ Designing and shipping high-performance products end to end — from UX to produ
 
 <div align="center">
 
-<sub>✦ Crafting fast, thoughtful products at <a href="https://zer0sprint.com">ZeroSprint</a> ✦</sub>
+<sub>✦ Designing and building fast, thoughtful products ✦</sub>
 
 </div>
