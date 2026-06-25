@@ -1,20 +1,19 @@
-<!-- ===== HEADER: blaugrana waving gradient ===== -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:004D98,100:A50044&height=150&section=header" alt="" />
+<!-- ===== HERO ===== -->
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hero.svg" alt="Més que un club — FC Barcelona" />
 
-<!-- ===== NAME (Sora) + TAGLINE (Poppins) ===== -->
+<!-- ===== IDENTITY ===== -->
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/barca-crest.svg" height="92" alt="FC Barcelona crest" />
+<img src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/barca-crest.svg" height="96" alt="FC Barcelona crest" />
 
-[![name](https://readme-typing-svg.demolab.com/?font=Sora&weight=800&size=44&duration=2200&pause=100000&color=A50044&center=true&vCenter=true&width=600&height=64&lines=Haseeb+Qureshi)](https://github.com/qureshiux-source)
+[![name](https://readme-typing-svg.demolab.com/?font=Sora&weight=800&size=46&duration=2200&pause=100000&color=A50044&center=true&vCenter=true&width=620&height=66&lines=Haseeb+Qureshi)](https://github.com/qureshiux-source)
 
-[![tagline](https://readme-typing-svg.demolab.com/?font=Poppins&weight=600&size=20&pause=1200&color=004D98&center=true&vCenter=true&width=660&lines=Product+Designer+%26+Builder;Designing+intuitive+user+experiences;Shipping+production+TypeScript)](https://github.com/qureshiux-source)
+[![tagline](https://readme-typing-svg.demolab.com/?font=Poppins&weight=600&size=21&pause=1100&color=004D98&center=true&vCenter=true&width=720&lines=Product+Designer+%26+Developer;I+design+the+experience+and+ship+the+code;From+Figma+frame+to+production+TypeScript;M%C3%A9s+que+un+dissenyador)](https://github.com/qureshiux-source)
 
-*“Més que un club”*
-
-<img src="https://komarev.com/ghpvc/?username=qureshiux-source&label=Profile%20views&color=A50044&style=for-the-badge" alt="profile views" />
+<img src="https://img.shields.io/badge/Product%20Designer-A50044?style=for-the-badge&labelColor=0d1117" alt="Product Designer" />
+<img src="https://img.shields.io/badge/Developer-004D98?style=for-the-badge&labelColor=0d1117" alt="Developer" />
 &nbsp;
-<img src="https://img.shields.io/badge/UX_%2B_Engineering-004D98?style=for-the-badge" alt="focus" />
+<img src="https://komarev.com/ghpvc/?username=qureshiux-source&label=Profile%20views&color=EDBB00&style=for-the-badge&labelColor=0d1117" alt="profile views" />
 
 </div>
 
@@ -24,12 +23,12 @@
 
 ## About
 
-> I work where design meets engineering — shaping the experience and shipping the code behind it.
+> **Product Designer & Developer** — I design the experience *and* ship the code behind it. From the first Figma frame to production TypeScript, I take products end-to-end, so nothing gets lost in the handoff.
 
-- Product / UX designer who builds full-stack TypeScript, end to end.
-- Focused on fast, accessible, thoughtfully crafted interfaces.
-- Comfortable from Figma frame to React component to Postgres schema.
-- Reach me at **qureshi.ux@gmail.com**
+- **Design** — product & UX design, design systems, interaction design & prototyping in Figma.
+- **Build** — full-stack TypeScript: React / Next.js, Node / Express, PostgreSQL.
+- **The edge** — I close the gap between design and engineering: fewer handoffs, tighter craft, faster shipping.
+- **Open to** product-design & design-engineer roles and freelance — reach me at **qureshi.ux@gmail.com**
 
 <br/>
 
@@ -78,7 +77,7 @@
 
 <div align="center">
 
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/output/messi-goal.svg?v=5" alt="Aerial view: Messi dribbles a tiny ball past my real commit graph and scores" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/output/messi-goal.svg?v=5" alt="Aerial view: Messi dribbles a tiny ball past my real commit graph and scores, then the blocks spell GOAL ANKARA MESSI" />
 
 </div>
 
@@ -86,5 +85,5 @@
 
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/senyera.svg" alt="" />
 
-<!-- ===== FOOTER: blaugrana waving gradient ===== -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:A50044,100:004D98&height=120&section=footer" alt="" />
+<!-- ===== FOOTER ===== -->
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/footer.svg" alt="Força Barça — Product Designer & Developer" />
