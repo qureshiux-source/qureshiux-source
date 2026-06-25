@@ -17,11 +17,18 @@
 
 </div>
 
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/senyera.svg" alt="" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/divider.svg?v=1" alt="" />
 
 <br/>
 
 ## About
+
+<table>
+<tr>
+<td width="34%" valign="top">
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/fut-card.svg?v=1" alt="Haseeb Qureshi — player card" />
+</td>
+<td valign="top">
 
 > **Product Designer & Developer** — I design the experience *and* ship the code behind it. From the first Figma frame to production TypeScript, I take products end-to-end, so nothing gets lost in the handoff.
 
@@ -30,11 +37,19 @@
 - **The edge** — I close the gap between design and engineering: fewer handoffs, tighter craft, faster shipping.
 - **Open to** product-design & design-engineer roles and freelance — reach me at **qureshi.ux@gmail.com**
 
+</td>
+</tr>
+</table>
+
 <br/>
 
 ## Tech & Tools
 
 <div align="center">
+
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/starting-xi.svg?v=1" alt="My stack as a 4-3-3 starting XI" />
+
+<br/><br/>
 
 <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,express,postgres,prisma,tailwind,figma,git,github,vite,vscode&theme=dark&perline=7" alt="tech stack" />
 
@@ -83,7 +98,17 @@
 
 <br/>
 
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/senyera.svg" alt="" />
+## Honours
+
+<div align="center">
+
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/honours.svg?v=1" alt="Honours cabinet" />
+
+</div>
+
+<br/>
+
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/divider.svg?v=1" alt="" />
 
 <!-- ===== FOOTER ===== -->
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/footer.svg" alt="Força Barça — Product Designer & Developer" />
