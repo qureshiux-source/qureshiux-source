@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150" width="1200" height="150" role="img" aria-label="Força Barça — Haseeb Qureshi, Product Designer and Developer">
+  <defs>
+    <pattern id="bg" width="120" height="150" patternUnits="userSpaceOnUse">
+      <rect width="60" height="150" fill="#A50044"/>
+      <rect x="60" width="60" height="150" fill="#004D98"/>
+    </pattern>
+    <linearGradient id="sh" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.5"/>
+      <stop offset="0.5" stop-color="#000000" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.25"/>
+    </linearGradient>
+    <clipPath id="r"><rect width="1200" height="150" rx="18"/></clipPath>
+  </defs>
+  <g clip-path="url(#r)">
+    <rect width="1200" height="150" fill="url(#bg)"/>
+    <rect width="1200" height="150" fill="url(#sh)"/>
+    <rect width="1200" height="20" fill="#FCDD09"/>
+    <rect y="2.5" width="1200" height="2.6" fill="#DA121A"/>
+    <rect y="7.5" width="1200" height="2.6" fill="#DA121A"/>
+    <rect y="12.5" width="1200" height="2.6" fill="#DA121A"/>
+    <rect y="17.4" width="1200" height="2.6" fill="#DA121A"/>
+    <rect y="24" width="1200" height="3" fill="#EDBB00"/>
+    <text x="602" y="92" text-anchor="middle" font-family="Sora,'Segoe UI',Verdana,sans-serif" font-size="44" font-weight="800" letter-spacing="6" fill="#A50044" opacity="0.5">FORÇA BARÇA</text>
+    <text x="600" y="90" text-anchor="middle" font-family="Sora,'Segoe UI',Verdana,sans-serif" font-size="44" font-weight="800" letter-spacing="6" fill="#EDBB00">FORÇA BARÇA</text>
+    <text x="600" y="122" text-anchor="middle" font-family="'Segoe UI',Verdana,sans-serif" font-size="16" letter-spacing="4" fill="#ffffff" opacity="0.9">HASEEB QURESHI &#183; PRODUCT DESIGNER &amp; DEVELOPER</text>
+  </g>
+</svg>
