@@ -78,7 +78,7 @@
 
 <div align="center">
 
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/messi-goal.svg?v=2" alt="Aerial view: Messi dribbles a tiny ball past the commit grid and scores" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/output/messi-goal.svg?v=3" alt="Aerial view: Messi dribbles a tiny ball past my real commit graph and scores" />
 
 </div>
 
