@@ -4,6 +4,8 @@
 <!-- ===== NAME (Sora) + TAGLINE (Poppins) ===== -->
 <div align="center">
 
+<img src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/barca-crest.svg" height="92" alt="FC Barcelona crest" />
+
 [![name](https://readme-typing-svg.demolab.com/?font=Sora&weight=800&size=44&duration=2200&pause=100000&color=A50044&center=true&vCenter=true&width=600&height=64&lines=Haseeb+Qureshi)](https://github.com/qureshiux-source)
 
 [![tagline](https://readme-typing-svg.demolab.com/?font=Poppins&weight=600&size=20&pause=1200&color=004D98&center=true&vCenter=true&width=660&lines=Product+Designer+%26+Builder;Designing+intuitive+user+experiences;Shipping+production+TypeScript)](https://github.com/qureshiux-source)
@@ -72,15 +74,11 @@
 
 <br/>
 
-## Contribution Snake
+## Match Highlight — Ankara Messi
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/output/github-contribution-grid-snake.svg" />
-  <img alt="snake eating contribution graph" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/output/github-contribution-grid-snake.svg" />
-</picture>
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/messi-goal.svg" alt="Messi dribbles past the commits and scores a goal" />
 
 </div>
 
