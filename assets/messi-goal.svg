@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 240" width="820" height="240" role="img" aria-label="Messi dribbles past the commits and scores a goal">
+  <defs>
+    <clipPath id="round"><rect x="0" y="0" width="820" height="240" rx="16"/></clipPath>
+    <radialGradient id="spot" cx="78%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .run  { animation: run 8s ease-in-out infinite; }
+      .ball { animation: ball 8s ease-in-out infinite; }
+      .spin { animation: spin 0.9s linear infinite; transform-box: fill-box; transform-origin: center; }
+      .gol  { opacity: 0; animation: gol 8s ease-in-out infinite; }
+      .net  { opacity: 0; animation: gol 8s ease-in-out infinite; }
+      .cmt  { fill: #2ea043; animation: beat 8s ease-in-out infinite; }
+      .d1{animation-delay:.2s}.d2{animation-delay:1s}.d3{animation-delay:1.9s}
+      .d4{animation-delay:2.8s}.d5{animation-delay:3.6s}.d6{animation-delay:4.4s}
+      text { font-family: 'Sora','Poppins','Segoe UI',Verdana,sans-serif; }
+
+      @keyframes run {
+        0%   { transform: translate(36px,150px);  opacity: 0; }
+        4%   { transform: translate(60px,148px);  opacity: 1; }
+        14%  { transform: translate(140px,140px); }
+        26%  { transform: translate(240px,158px); }
+        38%  { transform: translate(340px,138px); }
+        50%  { transform: translate(440px,158px); }
+        62%  { transform: translate(540px,140px); }
+        70%  { transform: translate(636px,150px); }
+        76%  { transform: translate(660px,150px); }
+        90%  { transform: translate(660px,150px); opacity: 1; }
+        97%  { opacity: 0; }
+        100% { transform: translate(36px,150px);  opacity: 0; }
+      }
+      @keyframes ball {
+        0%   { transform: translate(70px,168px);  opacity: 0; }
+        4%   { transform: translate(94px,166px);  opacity: 1; }
+        14%  { transform: translate(174px,158px); }
+        26%  { transform: translate(274px,174px); }
+        38%  { transform: translate(374px,152px); }
+        50%  { transform: translate(474px,174px); }
+        62%  { transform: translate(574px,156px); }
+        70%  { transform: translate(672px,162px); }
+        73%  { transform: translate(718px,118px); }
+        77%  { transform: translate(772px,104px); }
+        81%  { transform: translate(786px,140px); }
+        90%  { transform: translate(786px,140px); opacity: 1; }
+        97%  { opacity: 0; }
+        100% { transform: translate(70px,168px);  opacity: 0; }
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      @keyframes beat {
+        0%,10% { fill: #2ea043; transform: translateY(0); }
+        13%    { fill: #A50044; transform: translateY(-5px); }
+        18%    { fill: #2ea043; transform: translateY(0); }
+        100%   { fill: #2ea043; }
+      }
+      @keyframes gol {
+        0%,72% { opacity: 0; transform: translateY(8px); }
+        77%    { opacity: 1; transform: translateY(0); }
+        90%    { opacity: 1; }
+        97%    { opacity: 0; }
+        100%   { opacity: 0; }
+      }
+    </style>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <!-- pitch + mowing stripes -->
+    <rect x="0" y="0" width="820" height="240" fill="#1f7a37"/>
+    <rect x="102" y="0" width="102" height="240" fill="#249040"/>
+    <rect x="306" y="0" width="102" height="240" fill="#249040"/>
+    <rect x="510" y="0" width="102" height="240" fill="#249040"/>
+    <rect x="714" y="0" width="106" height="240" fill="#249040"/>
+    <rect x="0" y="0" width="820" height="240" fill="url(#spot)"/>
+
+    <!-- markings -->
+    <g stroke="#ffffff" stroke-opacity="0.5" fill="none" stroke-width="2">
+      <line x1="64" y1="6" x2="64" y2="234"/>
+      <circle cx="64" cy="120" r="44"/>
+      <rect x="690" y="46" width="140" height="148"/>
+      <rect x="760" y="84" width="70" height="72"/>
+    </g>
+
+    <!-- GOAL -->
+    <g stroke="#ffffff" stroke-opacity="0.4" stroke-width="1">
+      <line x1="776" y1="70" x2="776" y2="170"/><line x1="786" y1="70" x2="786" y2="170"/>
+      <line x1="796" y1="70" x2="796" y2="170"/><line x1="806" y1="70" x2="806" y2="170"/>
+      <line x1="772" y1="82" x2="816" y2="82"/><line x1="772" y1="94" x2="816" y2="94"/>
+      <line x1="772" y1="106" x2="816" y2="106"/><line x1="772" y1="118" x2="816" y2="118"/>
+      <line x1="772" y1="130" x2="816" y2="130"/><line x1="772" y1="142" x2="816" y2="142"/>
+      <line x1="772" y1="154" x2="816" y2="154"/>
+    </g>
+    <rect class="net" x="772" y="72" width="46" height="96" fill="#EDBB00"/>
+    <rect x="769" y="64" width="6" height="112" fill="#ffffff"/>
+    <rect x="769" y="64" width="52" height="6" fill="#ffffff"/>
+    <rect x="769" y="170" width="52" height="6" fill="#ffffff"/>
+
+    <!-- the COMMITS (defenders he dribbles past) -->
+    <rect class="cmt d1" x="150" y="150" width="16" height="16" rx="3"/>
+    <rect class="cmt d2" x="252" y="92"  width="16" height="16" rx="3"/>
+    <rect class="cmt d3" x="352" y="150" width="16" height="16" rx="3"/>
+    <rect class="cmt d4" x="452" y="96"  width="16" height="16" rx="3"/>
+    <rect class="cmt d5" x="552" y="150" width="16" height="16" rx="3"/>
+    <rect class="cmt d6" x="636" y="98"  width="16" height="16" rx="3"/>
+
+    <!-- MESSI (#10, blaugrana) -->
+    <g class="run">
+      <rect x="-5"  y="0"   width="3.4" height="22" rx="1.6" fill="#f1c27d"/>
+      <rect x="1.8" y="0"   width="3.4" height="22" rx="1.6" fill="#f1c27d"/>
+      <rect x="-7"  y="20"  width="7"   height="4"  rx="2"  fill="#111"/>
+      <rect x="0.5" y="20"  width="7"   height="4"  rx="2"  fill="#111"/>
+      <rect x="-9"  y="-4"  width="18"  height="9"  rx="2"  fill="#0a3d8f"/>
+      <rect x="-10" y="-24" width="20"  height="22" rx="3"  fill="#004D98"/>
+      <rect x="-8"  y="-24" width="4"   height="22" fill="#A50044"/>
+      <rect x="0"   y="-24" width="4"   height="22" fill="#A50044"/>
+      <rect x="6"   y="-24" width="4"   height="22" fill="#A50044"/>
+      <rect x="-13" y="-22" width="4"   height="14" rx="2"  fill="#f1c27d"/>
+      <rect x="9"   y="-22" width="4"   height="14" rx="2"  fill="#f1c27d"/>
+      <text x="0" y="-9" text-anchor="middle" font-size="8" font-weight="800" fill="#EDBB00">10</text>
+      <circle cx="0" cy="-30" r="6.5" fill="#f1c27d"/>
+      <path d="M-6.5 -31 a6.5 6.5 0 0 1 13 0 q-6.5 -5 -13 0 z" fill="#2a1c12"/>
+    </g>
+
+    <!-- BALL -->
+    <g class="ball">
+      <g class="spin">
+        <circle r="7" fill="#ffffff" stroke="#111" stroke-width="0.8"/>
+        <polygon points="0,-4 3.8,-1.2 2.4,3.2 -2.4,3.2 -3.8,-1.2" fill="#111"/>
+        <circle cx="0" cy="-4.5" r="1.2" fill="#111"/>
+        <circle cx="4.8" cy="1.4" r="1.2" fill="#111"/>
+        <circle cx="-4.8" cy="1.4" r="1.2" fill="#111"/>
+      </g>
+    </g>
+
+    <!-- celebration -->
+    <g class="gol" text-anchor="middle">
+      <text x="470" y="58" font-size="40" font-weight="900" fill="#EDBB00" stroke="#A50044" stroke-width="1.2" paint-order="stroke">GOOOOL!</text>
+      <text x="470" y="84" font-size="15" font-weight="700" fill="#ffffff" letter-spacing="3">ANKARA MESSI</text>
+    </g>
+  </g>
+
+  <rect x="1.5" y="1.5" width="817" height="237" rx="16" fill="none" stroke="#A50044" stroke-width="3"/>
+</svg>
