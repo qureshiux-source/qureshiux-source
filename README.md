@@ -29,14 +29,7 @@
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/player-card.svg?v=1" alt="Haseeb Qureshi — eFootball player card, 107 Product Expert" />
 </td>
 <td valign="top">
-
-> **Product Designer & Developer** — I design the experience *and* ship the code behind it. From the first Figma frame to production TypeScript, I take products end-to-end, so nothing gets lost in the handoff.
-
-- **Design** — product & UX design, design systems, interaction design & prototyping in Figma.
-- **Build** — full-stack TypeScript: React / Next.js, Node / Express, PostgreSQL.
-- **The edge** — I close the gap between design and engineering: fewer handoffs, tighter craft, faster shipping.
-- **Open to** product-design & design-engineer roles and freelance — reach me at **qureshi.ux@gmail.com**
-
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/player-stats.svg?v=1" alt="Player abilities — personal stats" />
 </td>
 </tr>
 </table>
@@ -47,7 +40,7 @@
 
 <div align="center">
 
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/manager-card.svg?v=1" alt="Manager card — product tactics & specialities" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/manager-card.svg?v=2" alt="Manager card — product tactics & specialities" />
 
 </div>
 
