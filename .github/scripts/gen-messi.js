@@ -123,6 +123,16 @@ for(let i=0;i<24;i++){ const cxp=W/2+(rnd()-0.5)*560, cyp=MID+(rnd()-0.5)*70, sz
   confetti.push(`<rect class="conf" x="${f(cxp)}" y="${f(cyp)}" width="${sz}" height="${sz}" rx="0.7" fill="${col}"/>`); }
 confetti=confetti.join("\n      ");
 
+// ---- commentary typewriter: "ANKARA MESSIII" loads letter-by-letter, looping ----
+const CTXT="ANKARA MESSIII", CN=CTXT.length, cw=6.0, cx0=78-(CN-1)*cw/2;
+let cmLetters=[], cmKf=[];
+for(let i=0;i<CN;i++){ const ch=CTXT[i]; if(ch===" ") continue;
+  const ap=(i/CN)*55;
+  cmKf.push(`@keyframes tl${i} { 0%,${f(ap)}% {opacity:0} ${f(ap+4)}% {opacity:1} 95% {opacity:1} 99% {opacity:0} 100% {opacity:0} }`);
+  cmLetters.push(`<text x="${f(cx0+i*cw)}" y="45.5" text-anchor="middle" font-family="'Consolas','Courier New',monospace" font-size="9" font-weight="800" fill="#EDBB00" style="animation: tl${i} 2.2s ease-out infinite">${ch}</text>`);
+}
+cmLetters=cmLetters.join(""); cmKf=cmKf.join("\n      ");
+
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Aerial play: Xavi passes to Messi (top-down player) who dribbles past my real commits, beats the keeper and scores; the board erupts GOAL GOAL GOAL GOAL">
   <defs>
     <clipPath id="round"><rect x="0" y="0" width="${W}" height="${H}" rx="14"/></clipPath>
@@ -144,7 +154,6 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" wid
       .cmt { opacity: 0; animation: cmt ${LOOP}s linear infinite; }
       .cm-pass { opacity: 0; animation: cmpass ${LOOP}s linear infinite; }
       .cm-drib { opacity: 0; animation: cmdrib ${LOOP}s linear infinite; }
-      .cm-blink { animation: blink 0.5s ease-in-out infinite; }
       text { font-family: 'Sora','Poppins','Segoe UI',Verdana,sans-serif; }
       @keyframes gridfade { 0%,71% {opacity:1} 74% {opacity:0} 99% {opacity:0} 100% {opacity:1} }
       @keyframes msgshow { 0%,73% {opacity:0} 75% {opacity:1} 98% {opacity:1} 99.5% {opacity:0} 100% {opacity:0} }
@@ -172,7 +181,7 @@ ${ballKf}
       @keyframes cmt { 0%,4% {opacity:0} 6% {opacity:1} 65% {opacity:1} 68% {opacity:0} 100% {opacity:0} }
       @keyframes cmpass { 0%,5% {opacity:0} 7% {opacity:1} 18% {opacity:1} 20% {opacity:0} 100% {opacity:0} }
       @keyframes cmdrib { 0%,20% {opacity:0} 22% {opacity:1} 63% {opacity:1} 65% {opacity:0} 100% {opacity:0} }
-      @keyframes blink { 0%,100% {opacity:1} 50% {opacity:0.3} }
+      ${cmKf}
       ${dodgeKf}
     </style>
   </defs>
@@ -210,7 +219,7 @@ ${ballKf}
       <circle cx="41" cy="29" r="2.2" fill="#A50044"/>
       <text x="47" y="31.4" font-size="6.5" font-weight="700" letter-spacing="1.5" fill="#9aa4ad">LIVE</text>
       <g class="cm-pass"><text x="78" y="45" text-anchor="middle" font-size="10" font-weight="800" fill="#ffffff">XAVI → MESSI</text></g>
-      <g class="cm-drib"><text class="cm-blink" x="78" y="45.5" text-anchor="middle" font-size="10.5" font-weight="800" fill="#EDBB00">ANKARA MESSI</text></g>
+      <g class="cm-drib">${cmLetters}</g>
     </g>
 
     <line class="streak" x1="800" y1="${MID}" x2="${IMPACT_X-4}" y2="${MID}" stroke="#EDBB00" stroke-width="3" stroke-linecap="round"/>
