@@ -1,5 +1,6 @@
-// Reads contrib.json (GitHub GraphQL contributionCalendar) and writes dist/messi-goal.svg
-// Renders the REAL contribution grid; Messi dribbles a tiny ball past the commits, then scores.
+// Reads contrib.json (GitHub GraphQL contributionCalendar) -> writes dist/messi-goal.svg
+// Renders the REAL contribution grid. Messi carries a tiny ball (dribble touches) and
+// dribbles PAST commits; each commit he brushes nudges aside (away from him) and springs back.
 const fs = require('fs');
 
 const cal = JSON.parse(fs.readFileSync("contrib.json", "utf8"))
@@ -17,43 +18,73 @@ const PAL = { NONE:"#161b22", FIRST_QUARTILE:"#0e4429", SECOND_QUARTILE:"#006d32
               THIRD_QUARTILE:"#26a641", FOURTH_QUARTILE:"#39d353" };
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
-let cells = [];
-weeks.forEach((w, c) => {
-  w.contributionDays.forEach(d => {
-    const x = GX + c * PITCH, y = GY + d.weekday * PITCH;
-    cells.push(`<rect x="${x}" y="${y}" width="${CELL}" height="${CELL}" rx="2" fill="${PAL[d.contributionLevel] || PAL.NONE}"/>`);
-  });
-});
-cells = cells.join("\n    ");
-
-let monthLabels = [], lastM = -1;
-weeks.forEach((w, c) => {
-  const m = parseInt(w.firstDay.split("-")[1], 10) - 1;
-  if (m !== lastM && c < COLS - 1) {
-    monthLabels.push(`<text x="${GX + c * PITCH}" y="${GY - 7}" font-size="9" fill="#7d8590">${MONTHS[m]}</text>`);
-    lastM = m;
-  }
-});
-monthLabels = monthLabels.join("\n    ");
-
-const dayLabels = [[1,"Mon"],[3,"Wed"],[5,"Fri"]].map(([r,t]) =>
-  `<text x="${GX - 6}" y="${GY + r * PITCH + CELL - 2}" font-size="9" fill="#7d8590" text-anchor="end">${t}</text>`
-).join("\n    ");
-
+// ---- path ----
 const MID = GY + 3 * PITCH;
 const AMP = 3 * PITCH, WEAVES = 5;
 const T0 = 3, TG = 78, TS = 86;
 const xStart = GX - 14, xGridEnd = gridRight + 2, xPlant = W - 78;
 const GOAL_CY = MID;
-
 function messi(t){
   if (t <= T0) return [xStart, MID];
   if (t <= TG){ const fr=(t-T0)/(TG-T0); return [xStart+fr*(xGridEnd-xStart), MID+AMP*Math.sin(fr*Math.PI*2*WEAVES)]; }
   if (t <= TS){ const fr=(t-TG)/(TS-TG); const y0=MID+AMP*Math.sin(Math.PI*2*WEAVES); return [xGridEnd+fr*(xPlant-xGridEnd), y0+fr*(GOAL_CY-y0)]; }
   return [xPlant, GOAL_CY];
 }
+function tangent(t){
+  const [ax,ay]=messi(Math.max(0,t-0.6)), [bx,by]=messi(Math.min(100,t+0.6));
+  let dx=bx-ax, dy=by-ay; const m=Math.hypot(dx,dy);
+  if (m < 0.001) return [1,0];
+  return [dx/m, dy/m];
+}
 const uniq = a => [...new Set(a)].sort((p,q)=>p-q);
 
+// ---- commits + dodge detection ----
+const THRESH = 22;            // how close (px) a commit must be to react
+// dense samples of the dribble phase
+const samples = [];
+for (let t = T0; t <= TG; t += 0.5){ const [x,y]=messi(t); samples.push([t,x,y]); }
+
+let cells = [], dodgeKf = [], dk = 0;
+weeks.forEach((w, c) => {
+  w.contributionDays.forEach(d => {
+    const x = GX + c * PITCH, y = GY + d.weekday * PITCH;
+    const fill = PAL[d.contributionLevel] || PAL.NONE;
+    const green = d.contributionLevel && d.contributionLevel !== "NONE";
+    let extra = "";
+    if (green){
+      const ccx = x + CELL/2, ccy = y + CELL/2;
+      let best = 1e9, bt = 0, bmx = 0, bmy = 0;
+      for (const [t,mx,my] of samples){
+        const dist = Math.hypot(ccx-mx, ccy-my);
+        if (dist < best){ best = dist; bt = t; bmx = mx; bmy = my; }
+      }
+      if (best < THRESH){
+        let dx = ccx-bmx, dy = ccy-bmy; const m = Math.hypot(dx,dy) || 1;
+        const push = Math.min(13, 6 + (THRESH-best)/THRESH * 8);
+        dx = dx/m*push; dy = dy/m*push;
+        const delay = bt/100*LOOP - 0.22;     // align dodge peak (2% of cycle) with closest approach
+        dodgeKf.push(`@keyframes dodge${dk} { 0% {transform:translate(0,0)} 2% {transform:translate(${f(dx)}px,${f(dy)}px)} 7% {transform:translate(0,0)} 100% {transform:translate(0,0)} }`);
+        extra = ` style="animation: dodge${dk} ${LOOP}s ease-out infinite; animation-delay: ${f(delay)}s"`;
+        dk++;
+      }
+    }
+    cells.push(`<rect x="${x}" y="${y}" width="${CELL}" height="${CELL}" rx="2" fill="${fill}"${extra}/>`);
+  });
+});
+cells = cells.join("\n    ");
+dodgeKf = dodgeKf.join("\n      ");
+
+// ---- labels ----
+let monthLabels = [], lastM = -1;
+weeks.forEach((w, c) => {
+  const m = parseInt(w.firstDay.split("-")[1], 10) - 1;
+  if (m !== lastM && c < COLS - 1){ monthLabels.push(`<text x="${GX + c * PITCH}" y="${GY - 7}" font-size="9" fill="#7d8590">${MONTHS[m]}</text>`); lastM = m; }
+});
+monthLabels = monthLabels.join("\n    ");
+const dayLabels = [[1,"Mon"],[3,"Wed"],[5,"Fri"]].map(([r,t]) =>
+  `<text x="${GX - 6}" y="${GY + r * PITCH + CELL - 2}" font-size="9" fill="#7d8590" text-anchor="end">${t}</text>`).join("\n    ");
+
+// ---- player keyframes ----
 let runPts=[0,T0]; for(let t=5;t<TG;t+=3) runPts.push(t); runPts.push(TG,82,TS,96,97,100);
 let runKf = uniq(runPts).map(t=>{
   let [x,y]=messi(t), op="";
@@ -62,10 +93,16 @@ let runKf = uniq(runPts).map(t=>{
   return `  ${t}% { transform:translate(${f(x)}px,${f(y)}px); ${op} }`;
 }).join("\n");
 
-function ball(t){ const [x,y]=messi(t); return [x+10, y-2]; }
+// ---- ball: carried ahead with dribble touches ----
+const TOUCHES = 14;
+function ballCarry(t){
+  const [mx,my]=messi(t), [tx,ty]=tangent(t);
+  const off = 11 + 6*Math.sin(2*Math.PI*TOUCHES*((t-T0)/(TG-T0)));
+  return [mx+tx*off, my+ty*off];
+}
 let ballPts=[0,T0]; for(let t=5;t<=78;t+=3) ballPts.push(t);
 let ballKf = uniq(ballPts).map(t=>{
-  let [x,y]=ball(t); let op = t===0?"opacity:0;":(t===T0?"opacity:1;":"");
+  let [x,y]=ballCarry(t); let op = t===0?"opacity:0;":(t===T0?"opacity:1;":"");
   return `  ${t}% { transform:translate(${f(x)}px,${f(y)}px); ${op} }`;
 });
 ballKf.push(`  81% { transform:translate(${f(W-118)}px,${f(GOAL_CY-22)}px); }`);
@@ -73,22 +110,24 @@ ballKf.push(`  84% { transform:translate(${f(W-66)}px,${f(GOAL_CY-10)}px); }`);
 ballKf.push(`  86% { transform:translate(${f(W-44)}px,${f(GOAL_CY+4)}px); }`);
 ballKf.push(`  96% { transform:translate(${f(W-44)}px,${f(GOAL_CY+4)}px); opacity:1; }`);
 ballKf.push(`  97% { opacity:0; }`);
-ballKf.push(`  100% { transform:translate(${f(ball(0)[0])}px,${f(ball(0)[1])}px); opacity:0; }`);
+ballKf.push(`  100% { transform:translate(${f(ballCarry(0)[0])}px,${f(ballCarry(0)[1])}px); opacity:0; }`);
 ballKf = ballKf.join("\n");
 
+// ---- goal ----
 const GX0 = W - 70, GY0 = GOAL_CY - 26, GY1 = GOAL_CY + 26;
 let net=[];
 for(let gx=GX0+4; gx<W-6; gx+=6) net.push(`<line x1="${gx}" y1="${GY0+2}" x2="${gx}" y2="${GY1-2}"/>`);
 for(let gy=GY0+4; gy<GY1; gy+=6) net.push(`<line x1="${GX0+2}" y1="${gy}" x2="${W-8}" y2="${gy}"/>`);
 net = net.join("\n      ");
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Aerial view: Messi dribbles a tiny ball past my real commit graph and scores">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Aerial view: Messi carries a tiny ball past my real commit graph (commits dodge aside) and scores">
   <defs>
     <clipPath id="round"><rect x="0" y="0" width="${W}" height="${H}" rx="14"/></clipPath>
     <style>
+      rect[style] { transform-box: fill-box; }
       .run  { animation: run ${LOOP}s ease-in-out infinite; }
       .ball { animation: ball ${LOOP}s ease-in-out infinite; }
-      .spin { animation: spin 0.6s linear infinite; transform-box: fill-box; transform-origin: center; }
+      .spin { animation: spin 0.55s linear infinite; transform-box: fill-box; transform-origin: center; }
       .gol, .netflash { opacity: 0; animation: gol ${LOOP}s ease-in-out infinite; }
       text { font-family: 'Sora','Poppins','Segoe UI',Verdana,sans-serif; }
       @keyframes run {
@@ -105,6 +144,7 @@ ${ballKf}
         98% { opacity:0; }
         100% { opacity:0; }
       }
+      ${dodgeKf}
     </style>
   </defs>
 
@@ -149,4 +189,4 @@ ${ballKf}
 `;
 fs.mkdirSync("dist", { recursive: true });
 fs.writeFileSync("dist/messi-goal.svg", svg);
-console.log("generated dist/messi-goal.svg | weeks:", COLS, "| total:", cal.totalContributions, "| bytes:", svg.length);
+console.log("dist/messi-goal.svg | weeks:", COLS, "| green cells that dodge:", dk, "| bytes:", svg.length);
