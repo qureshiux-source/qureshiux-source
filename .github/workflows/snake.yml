@@ -14,14 +14,14 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Generate snake game from contribution graph
+      - name: Generate snake game (Barça palette)
         uses: Platane/snk@v3
         id: snake-gif
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake.svg?color_snake=%23A50044&color_dots=%23ebedf0,%239ec5ff,%23004D98,%23A50044,%23EDBB00
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%23EDBB00&color_dots=%23161b22,%23004D98,%23A50044,%23c0407a,%23EDBB00
 
       - name: Push generated SVGs to the output branch
         uses: crazy-max/ghaction-github-pages@v4
