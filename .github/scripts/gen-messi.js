@@ -18,16 +18,22 @@ const PAL = { NONE:"#161b22", FIRST_QUARTILE:"#0e4429", SECOND_QUARTILE:"#006d32
 const GREY = "#6e7681";
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
-// ---- path ----
+// ---- choreographed play: #6 (mid-height, ~20% across) passes to #10 (bottom-mid),
+//      who receives, dribbles up & forward toward goal, and scores ----
 const MID = GY + 3 * PITCH;
-const AMP = 3 * PITCH, WEAVES = 5;
-const T0 = 3, TG = 78;
-const xStart = GX - 14, xGridEnd = gridRight + 2;
+const T0 = 3, T_RECV = 19, TG = 78;
+const SIX   = [W*0.20, MID];                // number 6: vertical mid, horizontal 20%
+const START = [W*0.50, GY + 6*PITCH + 1];   // messi #10: bottom mid (waiting)
+const PLANT = [W - 80, MID];                // plant point in front of goal
 const GOAL_CY = MID, IMPACT_X = W - 43;
 function messi(t){
-  if (t <= T0) return [xStart, MID];
-  if (t <= TG){ const fr=(t-T0)/(TG-T0); return [xStart+fr*(xGridEnd-xStart), MID+AMP*Math.sin(fr*Math.PI*2*WEAVES)]; }
-  return [xGridEnd, MID];
+  if (t <= T_RECV) return [START[0], START[1]];
+  if (t <= TG){ const fr=(t-T_RECV)/(TG-T_RECV);
+    const x = START[0] + fr*(PLANT[0]-START[0]);
+    const y = START[1] + fr*(PLANT[1]-START[1]) + 13*Math.sin(fr*Math.PI*2*2.2);
+    return [x,y];
+  }
+  return [PLANT[0], PLANT[1]];
 }
 function tangent(t){ const [ax,ay]=messi(Math.max(0,t-0.6)), [bx,by]=messi(Math.min(TG,t+0.6)); let dx=bx-ax,dy=by-ay; const m=Math.hypot(dx,dy); return m<0.001?[1,0]:[dx/m,dy/m]; }
 const uniq = a => [...new Set(a)].sort((p,q)=>p-q);
@@ -36,7 +42,7 @@ const clamp = (v,a,b)=>Math.max(a,Math.min(b,v));
 // ---- commits + dodge (beaten -> grey + slide aside, stays beaten) ----
 const THRESH = 22;
 const samples = [];
-for (let t=T0;t<=TG;t+=0.5){ const [x,y]=messi(t); samples.push([t,x,y]); }
+for (let t=T_RECV;t<=TG;t+=0.5){ const [x,y]=messi(t); samples.push([t,x,y]); }
 
 let cells=[], dodgeKf=[], dk=0;
 weeks.forEach((w,c)=>{
@@ -71,30 +77,33 @@ const dayLabels=[[1,"Mon"],[3,"Wed"],[5,"Fri"]].map(([r,t])=>`<text x="${GX-6}" 
 
 // ---- player: dribble, then plant + KICK ----
 let runKf=[];
-runKf.push(`  0% { transform:translate(${f(xStart)}px,${f(MID)}px); opacity:0; }`);
-runKf.push(`  3% { transform:translate(${f(xStart)}px,${f(MID)}px); opacity:1; }`);
+runKf.push(`  0% { transform:translate(${f(START[0])}px,${f(START[1])}px); opacity:0; }`);
+runKf.push(`  3% { transform:translate(${f(START[0])}px,${f(START[1])}px); opacity:1; }`);
 for(let t=5;t<=TG;t+=3){ const [x,y]=messi(t); runKf.push(`  ${t}% { transform:translate(${f(x)}px,${f(y)}px); }`); }
 runKf.push(`  80% { transform:translate(786px,${f(MID)}px); }`);
 runKf.push(`  81% { transform:translate(797px,${f(MID)}px); }`);
 runKf.push(`  83% { transform:translate(788px,${f(MID)}px); }`);
 runKf.push(`  87% { transform:translate(788px,${f(MID)}px); opacity:1; }`);
 runKf.push(`  90% { transform:translate(788px,${f(MID)}px); opacity:0; }`);
-runKf.push(`  100% { transform:translate(${f(xStart)}px,${f(MID)}px); opacity:0; }`);
+runKf.push(`  100% { transform:translate(${f(START[0])}px,${f(START[1])}px); opacity:0; }`);
 runKf=runKf.join("\n");
 
-// ---- ball: carried, then struck into the net ----
+// ---- ball: at #6, passed to #10, carried forward, then struck into the net ----
 const TOUCHES=14;
-function ballCarry(t){ const [mx,my]=messi(t); const off=15+5*Math.sin(2*Math.PI*TOUCHES*((t-T0)/(TG-T0))); return [mx+off, my]; }
+function ballCarry(t){ const [mx,my]=messi(t); const off=15+5*Math.sin(2*Math.PI*TOUCHES*((t-T_RECV)/(TG-T_RECV))); return [mx+off, my]; }
+const BALL6=[SIX[0]+9, SIX[1]], BALLRECV=[START[0]+11, START[1]];
 let ballKf=[];
-ballKf.push(`  0% { transform:translate(${f(ballCarry(0)[0])}px,${f(ballCarry(0)[1])}px); opacity:0; }`);
-ballKf.push(`  3% { transform:translate(${f(ballCarry(T0)[0])}px,${f(ballCarry(T0)[1])}px); opacity:1; }`);
-for(let t=5;t<=77;t+=3){ const [x,y]=ballCarry(t); ballKf.push(`  ${t}% { transform:translate(${f(x)}px,${f(y)}px); }`); }
-ballKf.push(`  79% { transform:translate(790px,${f(MID)}px); }`);
-ballKf.push(`  81% { transform:translate(802px,${f(MID)}px); }`);
+ballKf.push(`  0% { transform:translate(${f(BALL6[0])}px,${f(BALL6[1])}px); opacity:0; }`);
+ballKf.push(`  3% { transform:translate(${f(BALL6[0])}px,${f(BALL6[1])}px); opacity:1; }`);
+ballKf.push(`  6% { transform:translate(${f(BALL6[0])}px,${f(BALL6[1])}px); }`);
+ballKf.push(`  ${T_RECV}% { transform:translate(${f(BALLRECV[0])}px,${f(BALLRECV[1])}px); }`);
+for(let t=T_RECV+2;t<=77;t+=3){ const [x,y]=ballCarry(t); ballKf.push(`  ${t}% { transform:translate(${f(x)}px,${f(y)}px); }`); }
+ballKf.push(`  79% { transform:translate(800px,${f(MID)}px); }`);
+ballKf.push(`  81% { transform:translate(812px,${f(MID)}px); }`);
 ballKf.push(`  83% { transform:translate(${f(IMPACT_X)}px,${f(MID)}px); }`);
 ballKf.push(`  89% { transform:translate(${f(IMPACT_X+3)}px,${f(MID+2)}px); opacity:1; }`);
 ballKf.push(`  90.5% { opacity:0; }`);
-ballKf.push(`  100% { transform:translate(${f(ballCarry(0)[0])}px,${f(ballCarry(0)[1])}px); opacity:0; }`);
+ballKf.push(`  100% { transform:translate(${f(BALL6[0])}px,${f(BALL6[1])}px); opacity:0; }`);
 ballKf=ballKf.join("\n");
 
 // ---- goal ----
@@ -136,6 +145,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" wid
       .streak { opacity: 0; animation: streak ${LOOP}s linear infinite; }
       .boom { opacity: 0; animation: boom ${LOOP}s ease-out infinite; }
       .gk { animation: gk ${LOOP}s ease-in-out infinite; }
+      .six { animation: sixfade ${LOOP}s ease-in-out infinite; }
       text { font-family: 'Sora','Poppins','Segoe UI',Verdana,sans-serif; }
       @keyframes gridfade { 0%,87% {opacity:1} 90% {opacity:0} 99% {opacity:0} 100% {opacity:1} }
       @keyframes msgshow { 0%,89% {opacity:0} 92% {opacity:1} 98% {opacity:1} 99.5% {opacity:0} 100% {opacity:0} }
@@ -162,6 +172,7 @@ ${ballKf}
         93% { transform: translate(2px,-22px); }
         100% { transform: translate(0,0); }
       }
+      @keyframes sixfade { 0% {opacity:0} 2% {opacity:1} 86% {opacity:1} 89% {opacity:0} 100% {opacity:0} }
       ${dodgeKf}
     </style>
   </defs>
@@ -192,6 +203,14 @@ ${ballKf}
     </g>
 
     <line class="streak" x1="800" y1="${MID}" x2="${IMPACT_X-4}" y2="${MID}" stroke="#EDBB00" stroke-width="3" stroke-linecap="round"/>
+
+    <g class="six">
+      <rect x="${SIX[0]-8}" y="${SIX[1]-8}" width="16" height="16" rx="3.5" fill="#004D98"/>
+      <rect x="${SIX[0]-8}" y="${SIX[1]-8}" width="4" height="16" fill="#A50044"/>
+      <rect x="${SIX[0]}"   y="${SIX[1]-8}" width="4" height="16" fill="#A50044"/>
+      <rect x="${SIX[0]-8}" y="${SIX[1]-8}" width="16" height="16" rx="3.5" fill="none" stroke="#0a1a30" stroke-width="1"/>
+      <text x="${SIX[0]}" y="${SIX[1]+3.6}" text-anchor="middle" font-size="11" font-weight="900" fill="#ffffff" stroke="#0a1a30" stroke-width="0.6" paint-order="stroke">6</text>
+    </g>
 
     <g class="run">
       <rect x="-8" y="-8" width="16" height="16" rx="3.5" fill="#004D98"/>
