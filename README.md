@@ -26,7 +26,7 @@
 <table>
 <tr>
 <td width="34%" valign="top">
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/fut-card.svg?v=1" alt="Haseeb Qureshi — player card" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/player-card.svg?v=1" alt="Haseeb Qureshi — eFootball player card, 107 Product Expert" />
 </td>
 <td valign="top">
 
@@ -40,6 +40,16 @@
 </td>
 </tr>
 </table>
+
+<br/>
+
+### Manager Profile — product level
+
+<div align="center">
+
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/manager-card.svg?v=1" alt="Manager card — product tactics & specialities" />
+
+</div>
 
 <br/>
 
