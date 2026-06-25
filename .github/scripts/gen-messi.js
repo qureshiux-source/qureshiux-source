@@ -84,7 +84,7 @@ runKf=runKf.join("\n");
 
 // ---- ball: carried, then struck into the net ----
 const TOUCHES=14;
-function ballCarry(t){ const [mx,my]=messi(t),[tx,ty]=tangent(t); const off=11+6*Math.sin(2*Math.PI*TOUCHES*((t-T0)/(TG-T0))); return [mx+tx*off,my+ty*off]; }
+function ballCarry(t){ const [mx,my]=messi(t); const off=15+5*Math.sin(2*Math.PI*TOUCHES*((t-T0)/(TG-T0))); return [mx+off, my]; }
 let ballKf=[];
 ballKf.push(`  0% { transform:translate(${f(ballCarry(0)[0])}px,${f(ballCarry(0)[1])}px); opacity:0; }`);
 ballKf.push(`  3% { transform:translate(${f(ballCarry(T0)[0])}px,${f(ballCarry(T0)[1])}px); opacity:1; }`);
@@ -135,6 +135,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" wid
       .netflash { opacity: 0; animation: flash ${LOOP}s ease-out infinite; }
       .streak { opacity: 0; animation: streak ${LOOP}s linear infinite; }
       .boom { opacity: 0; animation: boom ${LOOP}s ease-out infinite; }
+      .gk { animation: gk ${LOOP}s ease-in-out infinite; }
       text { font-family: 'Sora','Poppins','Segoe UI',Verdana,sans-serif; }
       @keyframes gridfade { 0%,87% {opacity:1} 90% {opacity:0} 99% {opacity:0} 100% {opacity:1} }
       @keyframes msgshow { 0%,89% {opacity:0} 92% {opacity:1} 98% {opacity:1} 99.5% {opacity:0} 100% {opacity:0} }
@@ -153,6 +154,13 @@ ${ballKf}
         85% { opacity:1; transform: translate(${f(IMPACT_X)}px,${f(MID)}px) scale(1.1); }
         90% { opacity:0; transform: translate(${f(IMPACT_X)}px,${f(MID)}px) scale(1.6); }
         100% { opacity:0; transform: translate(${f(IMPACT_X)}px,${f(MID)}px) scale(0.1); }
+      }
+      @keyframes gk {
+        0%,78% { transform: translate(0,0); }
+        82% { transform: translate(1px,-9px); }
+        85% { transform: translate(2px,-22px); }
+        93% { transform: translate(2px,-22px); }
+        100% { transform: translate(0,0); }
       }
       ${dodgeKf}
     </style>
@@ -175,15 +183,22 @@ ${ballKf}
     <circle cx="${GX0}" cy="${GY0}" r="2.6" fill="#ffffff"/>
     <circle cx="${GX0}" cy="${GY1}" r="2.6" fill="#ffffff"/>
 
+    <g class="gk">
+      <rect x="${GX0-2.5}" y="${GOAL_CY-1.5}" width="14" height="3" rx="1.5" fill="#1f1300"/>
+      <circle cx="${GX0-2.5}" cy="${GOAL_CY}" r="2.5" fill="#ffd23f" stroke="#1f1300" stroke-width="0.5"/>
+      <circle cx="${GX0+11.5}" cy="${GOAL_CY}" r="2.5" fill="#ffd23f" stroke="#1f1300" stroke-width="0.5"/>
+      <rect x="${GX0+0.5}" y="${GOAL_CY-6.5}" width="8" height="13" rx="2.6" fill="#ff8a1f" stroke="#1f1300" stroke-width="0.7"/>
+      <circle cx="${GX0+4.5}" cy="${GOAL_CY-8.5}" r="2.7" fill="#f1c27d" stroke="#1f1300" stroke-width="0.5"/>
+    </g>
+
     <line class="streak" x1="800" y1="${MID}" x2="${IMPACT_X-4}" y2="${MID}" stroke="#EDBB00" stroke-width="3" stroke-linecap="round"/>
 
     <g class="run">
-      <ellipse cx="0" cy="0" rx="6" ry="5.2" fill="#004D98"/>
-      <rect x="-1.8" y="-5.2" width="1.9" height="10.4" fill="#A50044"/>
-      <rect x="2.6"  y="-4.4" width="1.7" height="8.8"  fill="#A50044"/>
-      <rect x="-5.2" y="-4.4" width="1.7" height="8.8"  fill="#A50044"/>
-      <ellipse cx="0" cy="0" rx="6" ry="5.2" fill="none" stroke="#06203f" stroke-width="0.7"/>
-      <circle cx="4.4" cy="0" r="2.5" fill="#f1c27d" stroke="#06203f" stroke-width="0.5"/>
+      <rect x="-8" y="-8" width="16" height="16" rx="3.5" fill="#004D98"/>
+      <rect x="-8" y="-8" width="4" height="16" fill="#A50044"/>
+      <rect x="0"  y="-8" width="4" height="16" fill="#A50044"/>
+      <rect x="-8" y="-8" width="16" height="16" rx="3.5" fill="none" stroke="#0a1a30" stroke-width="1"/>
+      <text x="0" y="3.6" text-anchor="middle" font-size="11" font-weight="900" fill="#EDBB00" stroke="#0a1a30" stroke-width="0.6" paint-order="stroke">10</text>
     </g>
 
     <g class="ball">
