@@ -1,12 +1,12 @@
 <!-- ===== HERO ===== -->
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hero.svg?v=ui2" alt="Haseeb Qureshi — Product Designer & Developer" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hero.svg?v=ui3" alt="Haseeb Qureshi — Product Designer & Developer" />
 
 <!-- ===== PLAYER ===== -->
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-player.svg?v=ui2" alt="Player" />
 <div align="center">
 <img width="320" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/card.jpg?v=ui1" alt="Haseeb Qureshi — 107 LEGEND CDM" />
 </div>
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/player-panel.svg?v=ui2" alt="Player abilities" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/player-panel.svg?v=ui3" alt="Player abilities" />
 
 <!-- ===== MANAGER ===== -->
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-manager.svg?v=ui2" alt="Manager" />
@@ -20,7 +20,7 @@
 </div>
 
 <!-- ===== FORM & ACTIVITY ===== -->
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-activity.svg?v=ui2" alt="Form & Activity" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-activity.svg?v=ui3" alt="Form & Activity" />
 <div align="center">
 <img height="165em" src="https://github-readme-stats.vercel.app/api?username=qureshiux-source&show_icons=true&hide_border=true&count_private=true&bg_color=0a0e1c&title_color=f2c94c&icon_color=1fc7dd&text_color=ffffff&ring_color=A50044&rank_icon=github" alt="stats" />
 <img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=qureshiux-source&layout=compact&hide_border=true&bg_color=0a0e1c&title_color=f2c94c&text_color=ffffff&langs_count=8" alt="top languages" />
