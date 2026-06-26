@@ -1,9 +1,9 @@
 <!-- ===== HERO ===== -->
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hero.svg?v=ui6" alt="" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hero.svg?v=ui7" alt="" />
 
 <!-- ===== PLAYER ===== -->
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-player.svg?v=ui2" alt="" />
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/presentation.svg?v=2" alt="" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/presentation.svg?v=3" alt="" />
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/player-panel.svg?v=ui5" alt="" />
 
 <!-- ===== MANAGER ===== -->
