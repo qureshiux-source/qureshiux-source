@@ -3,10 +3,7 @@
 
 <!-- ===== PLAYER ===== -->
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-player.svg?v=ui2" alt="" />
-<p align="center">
-<img width="49%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/player-card.svg?v=1" alt="" />
-<img width="49%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/camp-nou.svg?v=1" alt="" />
-</p>
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/presentation.svg?v=1" alt="" />
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/player-panel.svg?v=ui5" alt="" />
 
 <!-- ===== MANAGER ===== -->
