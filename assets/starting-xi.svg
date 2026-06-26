@@ -1,9 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" role="img" aria-label="Starting XI — my stack 4-3-3">
-  <defs><clipPath id="px"><rect width="800" height="340" rx="16"/></clipPath><style>text{font-family:'Sora','Segoe UI',sans-serif}</style></defs>
+  <defs><clipPath id="px"><rect width="800" height="340" rx="16"/></clipPath>
+  <style>text{font-family:'Sora','Segoe UI',sans-serif}
+    .flow{animation:flow .8s linear infinite}@keyframes flow{to{stroke-dashoffset:-13}}
+    .ball{animation:bl 8s ease-in-out infinite}
+    @keyframes bl{0%{transform:translate(70px,168px);opacity:0}3%{transform:translate(70px,168px);opacity:1}15%{transform:translate(212px,202px)}30%{transform:translate(412px,168px)}45%{transform:translate(612px,84px)}58%{transform:translate(612px,168px)}70%{transform:translate(770px,168px)}84%{transform:translate(770px,168px);opacity:1}90%{opacity:0}100%{transform:translate(70px,168px);opacity:0}}
+    .p1,.p2,.p3{opacity:0}
+    .p1{animation:p1 8s infinite}@keyframes p1{0%,2%{opacity:0}6%,28%{opacity:1}32%,100%{opacity:0}}
+    .p2{animation:p2 8s infinite}@keyframes p2{0%,32%{opacity:0}36%,64%{opacity:1}68%,100%{opacity:0}}
+    .p3{animation:p3 8s infinite}@keyframes p3{0%,68%{opacity:0}72%,86%{opacity:1}90%,100%{opacity:0}}
+  </style></defs>
   <g clip-path="url(#px)">
     <rect width="800" height="340" fill="#10602b"/>
     <rect x="100" width="100" height="340" fill="#15732f"/><rect x="300" width="100" height="340" fill="#15732f"/><rect x="500" width="100" height="340" fill="#15732f"/><rect x="700" width="100" height="340" fill="#15732f"/>
     <g stroke="#ffffff" stroke-opacity="0.35" fill="none" stroke-width="2"><rect x="14" y="14" width="772" height="312"/><line x1="400" y1="14" x2="400" y2="326"/><circle cx="400" cy="170" r="50"/><rect x="14" y="95" width="60" height="150"/><rect x="726" y="95" width="60" height="150"/></g>
+    <polyline points="70,168 212,202 412,168 612,84 612,168 770,168" fill="none" stroke="#f2c94c" stroke-width="1.4" stroke-dasharray="2 6" opacity="0.3"/>
+    <g class="flow" fill="none" stroke="#1fc7dd" stroke-width="2.4" stroke-dasharray="7 6" opacity="0.85" stroke-linecap="round">
+      <path d="M222,60 Q400,38 520,52"/><path d="M222,274 Q400,300 520,284"/><path d="M620,92 Q665,112 692,150"/><path d="M620,244 Q665,224 692,186"/>
+    </g>
+    <g fill="#1fc7dd"><polygon points="514,47 527,52 514,57"/><polygon points="514,279 527,284 514,289"/><polygon points="685,144 697,153 683,157"/><polygon points="685,192 697,183 683,179"/></g>
     <text x="400" y="40" text-anchor="middle" font-size="17" font-weight="900" fill="#fff" letter-spacing="3" font-family="'Sora',sans-serif">STARTING XI</text>
     <text x="400" y="58" text-anchor="middle" font-size="10" font-weight="700" fill="#f2c94c" letter-spacing="4">MY STACK · 4-3-3</text>
     <text x="70" y="145" text-anchor="middle" font-size="9" font-weight="900" fill="#1fc7dd" letter-spacing="1">GK</text>
@@ -50,5 +64,11 @@
     <circle cx="612" cy="252" r="17" fill="#fff" stroke="#f2c94c" stroke-width="1.4"/>
     <g transform="translate(600.6,240.6) scale(0.95)"><path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z" fill="#F24E1E"/></g>
     <text x="612" y="283" text-anchor="middle" font-size="9.5" font-weight="800" fill="#fff">Figma</text>
+    <g class="ball"><circle r="5.5" fill="#fff" stroke="#0a0e1c" stroke-width="1"/></g>
+    <g text-anchor="middle" font-weight="900" font-size="11" letter-spacing="2">
+      <text class="p1" x="400" y="322" fill="#1fc7dd">▶ BUILD-UP</text>
+      <text class="p2" x="400" y="322" fill="#f2c94c">▶ ATTACK</text>
+      <text class="p3" x="400" y="322" fill="#fff">★ GOAL!</text>
+    </g>
   </g>
   <rect x="1.5" y="1.5" width="797" height="337" rx="16" fill="none" stroke="#A50044" stroke-width="2.5"/></svg>
