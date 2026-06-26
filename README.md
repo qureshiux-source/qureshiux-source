@@ -3,7 +3,7 @@
 
 <!-- ===== PLAYER ===== -->
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-player.svg?v=ui2" alt="" />
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/presentation.svg?v=4" alt="" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/presentation.svg?v=5" alt="" />
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/player-panel.svg?v=ui5" alt="" />
 
 <!-- ===== MANAGER ===== -->
