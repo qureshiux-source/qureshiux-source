@@ -3,16 +3,16 @@
 
 <!-- ===== PLAYER ===== -->
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-player.svg?v=ui2" alt="Player" />
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/avatar.svg?v=1" alt="Haseeb Qureshi" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/avatar.svg?v=2" alt="Haseeb Qureshi" />
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/player-panel.svg?v=ui3" alt="Player abilities" />
 
 <!-- ===== MANAGER ===== -->
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-manager.svg?v=ui2" alt="Manager" />
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/manager-card.svg?v=ui3" alt="Manager card — product tactics" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/manager-card.svg?v=ui4" alt="Manager card — product tactics" />
 
 <!-- ===== STACK ===== -->
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-stack.svg?v=ui2" alt="The Stack" />
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/starting-xi.svg?v=2" alt="Starting XI — 4-3-3" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/starting-xi.svg?v=3" alt="Starting XI — 4-3-3" />
 <div align="center">
 <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,express,postgres,prisma,tailwind,figma,git,github,vite,vscode&theme=dark&perline=7" alt="tech stack" />
 </div>
