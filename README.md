@@ -4,7 +4,7 @@
 <!-- ===== PLAYER ===== -->
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-player.svg?v=ui2" alt="Player" />
 <div align="center">
-<img width="320" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/card.svg?v=1" alt="Haseeb Qureshi — 107 LEGEND CDM" />
+<img width="320" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/card.svg?v=2" alt="Haseeb Qureshi — 107 LEGEND CDM" />
 </div>
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/player-panel.svg?v=ui3" alt="Player abilities" />
 
