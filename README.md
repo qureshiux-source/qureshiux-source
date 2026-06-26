@@ -1,117 +1,46 @@
-<!-- ===== HERO ===== -->
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hero.svg" alt="Més que un club — FC Barcelona" />
-
-<!-- ===== IDENTITY ===== -->
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/barca-crest.svg" height="96" alt="FC Barcelona crest" />
-
-[![name](https://readme-typing-svg.demolab.com/?font=Sora&weight=800&size=46&duration=2200&pause=100000&color=A50044&center=true&vCenter=true&width=620&height=66&lines=Haseeb+Qureshi)](https://github.com/qureshiux-source)
-
-[![tagline](https://readme-typing-svg.demolab.com/?font=Poppins&weight=600&size=21&pause=1100&color=004D98&center=true&vCenter=true&width=720&lines=Product+Designer+%26+Developer;I+design+the+experience+and+ship+the+code;From+Figma+frame+to+production+TypeScript;M%C3%A9s+que+un+dissenyador)](https://github.com/qureshiux-source)
-
-<img src="https://img.shields.io/badge/Product%20Designer-A50044?style=for-the-badge&labelColor=0d1117" alt="Product Designer" />
-<img src="https://img.shields.io/badge/Developer-004D98?style=for-the-badge&labelColor=0d1117" alt="Developer" />
-&nbsp;
-<img src="https://komarev.com/ghpvc/?username=qureshiux-source&label=Profile%20views&color=EDBB00&style=for-the-badge&labelColor=0d1117" alt="profile views" />
-
-</div>
-
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/divider.svg?v=1" alt="" />
-
-<br/>
-
-## About
-
+<!-- ============ PLAYER / HERO ============ -->
 <table>
 <tr>
-<td width="34%" valign="top">
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/player-card.svg?v=1" alt="Haseeb Qureshi — eFootball player card, 107 Product Expert" />
+<td width="42%" valign="top">
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/card.jpg?v=ui1" alt="Haseeb Qureshi — 107 LEGEND CDM, FC Barcelona" />
 </td>
 <td valign="top">
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/player-stats.svg?v=1" alt="Player abilities — personal stats" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/player-panel.svg?v=ui1" alt="Player abilities — Haseeb Qureshi" />
 </td>
 </tr>
 </table>
 
-<br/>
+<!-- ============ MANAGER ============ -->
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-manager.svg?v=ui1" alt="Manager" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/manager-card.svg?v=ui1" alt="Manager card — product tactics" />
 
-### Manager Profile — product level
-
+<!-- ============ THE STACK ============ -->
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-stack.svg?v=ui1" alt="The Stack" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/starting-xi.svg?v=1" alt="Starting XI — 4-3-3" />
 <div align="center">
-
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/manager-card.svg?v=2" alt="Manager card — product tactics & specialities" />
-
-</div>
-
-<br/>
-
-## Tech & Tools
-
-<div align="center">
-
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/starting-xi.svg?v=1" alt="My stack as a 4-3-3 starting XI" />
-
-<br/><br/>
-
 <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,express,postgres,prisma,tailwind,figma,git,github,vite,vscode&theme=dark&perline=7" alt="tech stack" />
-
 </div>
 
-<br/>
-
-## GitHub Stats
-
+<!-- ============ FORM & ACTIVITY ============ -->
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-activity.svg?v=ui1" alt="Form & Activity" />
 <div align="center">
-
-<img height="165em" src="https://github-readme-stats.vercel.app/api?username=qureshiux-source&show_icons=true&hide_border=true&count_private=true&bg_color=0D1117&title_color=EDBB00&icon_color=004D98&text_color=ffffff&ring_color=A50044&rank_icon=github" alt="stats" />
-<img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=qureshiux-source&layout=compact&hide_border=true&bg_color=0D1117&title_color=EDBB00&text_color=ffffff&langs_count=8" alt="top languages" />
-
+<img height="165em" src="https://github-readme-stats.vercel.app/api?username=qureshiux-source&show_icons=true&hide_border=true&count_private=true&bg_color=0a0e1c&title_color=f2c94c&icon_color=1fc7dd&text_color=ffffff&ring_color=A50044&rank_icon=github" alt="stats" />
+<img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=qureshiux-source&layout=compact&hide_border=true&bg_color=0a0e1c&title_color=f2c94c&text_color=ffffff&langs_count=8" alt="top languages" />
+<br/>
+<img src="https://streak-stats.demolab.com/?user=qureshiux-source&hide_border=true&background=0a0e1c&stroke=004D98&ring=A50044&fire=f2c94c&currStreakLabel=f2c94c&sideLabels=ffffff&currStreakNum=ffffff&sideNums=ffffff&dates=8b949e&dayLabels=1fc7dd" alt="commit streak" />
+<br/>
+<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=qureshiux-source&bg_color=0a0e1c&color=f2c94c&line=A50044&point=1fc7dd&area=true&area_color=004D98&hide_border=true&custom_title=Contribution%20Activity" alt="activity graph" />
 </div>
 
-<br/>
-
-## Commit Streak
-
+<!-- ============ MATCH HIGHLIGHT ============ -->
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-highlight.svg?v=ui1" alt="Match Highlight" />
 <div align="center">
-
-<img src="https://streak-stats.demolab.com/?user=qureshiux-source&hide_border=true&background=0D1117&stroke=004D98&ring=A50044&fire=EDBB00&currStreakLabel=EDBB00&sideLabels=ffffff&currStreakNum=ffffff&sideNums=ffffff&dates=8b949e&dayLabels=A50044" alt="commit streak" />
-
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/output/messi-goal.svg?v=12" alt="Messi dribbles past my real commits and scores" />
 </div>
 
-<br/>
+<!-- ============ HONOURS ============ -->
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-honours.svg?v=ui1" alt="Honours" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/honours.svg?v=ui1" alt="Honours cabinet" />
 
-## Contribution Activity
-
-<div align="center">
-
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=qureshiux-source&bg_color=0D1117&color=EDBB00&line=A50044&point=ffffff&area=true&area_color=004D98&hide_border=true&custom_title=Contribution%20Activity" alt="activity graph" />
-
-</div>
-
-<br/>
-
-## Match Highlight — Ankara Messi
-
-<div align="center">
-
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/output/messi-goal.svg?v=12" alt="Aerial view: Messi dribbles a tiny ball past my real commit graph and scores, then the blocks spell GOAL ANKARA MESSI" />
-
-</div>
-
-<br/>
-
-## Honours
-
-<div align="center">
-
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/honours.svg?v=1" alt="Honours cabinet" />
-
-</div>
-
-<br/>
-
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/divider.svg?v=1" alt="" />
-
-<!-- ===== FOOTER ===== -->
+<!-- ============ FOOTER ============ -->
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/footer.svg" alt="Força Barça — Product Designer & Developer" />
