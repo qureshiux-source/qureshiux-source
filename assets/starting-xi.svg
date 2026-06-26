@@ -1,14 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" role="img" aria-label="Starting XI 4-3-3 possession: 22-pass build-up, full-backs overlap, midfield invades half-spaces, Next.js finishes and deploys">
   <defs><clipPath id="px"><rect width="800" height="340" rx="16"/></clipPath>
   <style>text{font-family:'Sora','Segoe UI',sans-serif}
-    .ball{animation:bl 16s linear infinite}@keyframes bl{0%{transform:translate(70px,168px);opacity:0}4%{opacity:1}6%{transform:translate(70px,168px)}9.24%{transform:translate(211.69px,202.54px)}12.48%{transform:translate(210.88px,130.04px)}15.71%{transform:translate(385px,168px)}18.95%{transform:translate(331.11px,61.32px)}22.19%{transform:translate(362.33px,168px)}25.43%{transform:translate(401.54px,275.27px)}28.67%{transform:translate(339.67px,168px)}31.9%{transform:translate(206.02px,212.46px)}35.14%{transform:translate(205.21px,120.13px)}38.38%{transform:translate(542.39px,60.1px)}41.62%{transform:translate(457.54px,107.41px)}44.86%{transform:translate(300px,168px)}48.1%{transform:translate(502.1px,222.38px)}51.33%{transform:translate(560px,278px)}54.57%{transform:translate(673.06px,242.61px)}57.81%{transform:translate(300px,168px)}61.05%{transform:translate(584px,128px)}64.29%{transform:translate(560px,60px)}67.52%{transform:translate(706px,134px)}70.76%{transform:translate(300px,168px)}74%{transform:translate(740px,168px)}78%{transform:translate(790px,168px)}90%{transform:translate(790px,168px);opacity:1}93%{opacity:0}100%{transform:translate(70px,168px);opacity:0}}
+    .ball{animation:bl 16s linear infinite}@keyframes bl{0%{transform:translate(70px,168px);opacity:0}4%{opacity:1}6%{transform:translate(70px,168px)}9.58%{transform:translate(211.61px,202.69px)}13.16%{transform:translate(210.71px,129.74px)}16.74%{transform:translate(381.42px,168px)}20.32%{transform:translate(345.93px,61.23px)}23.89%{transform:translate(412px,100px)}27.47%{transform:translate(343.84px,168px)}31.05%{transform:translate(462.7px,276.32px)}34.63%{transform:translate(612px,252px)}38.21%{transform:translate(434.09px,232.66px)}41.79%{transform:translate(300px,168px)}45.37%{transform:translate(483.33px,111.61px)}48.95%{transform:translate(664.44px,111.89px)}52.53%{transform:translate(560px,60px)}56.11%{transform:translate(691.36px,126.21px)}59.68%{transform:translate(738.38px,168px)}63.26%{transform:translate(584px,210px)}66.84%{transform:translate(690px,240px)}70.42%{transform:translate(584px,128px)}74%{transform:translate(740px,168px)}78%{transform:translate(790px,168px)}90%{transform:translate(790px,168px);opacity:1}93%{opacity:0}100%{transform:translate(70px,168px);opacity:0}}
     .spin{animation:sp .45s linear infinite;transform-box:fill-box;transform-origin:center}@keyframes sp{to{transform:rotate(360deg)}}
     .gf{opacity:0;animation:gf 16s ease-out infinite}@keyframes gf{0%,79%{opacity:0}81%{opacity:0.85}88%{opacity:0}100%{opacity:0}}
     .depl{opacity:0;animation:dp 16s ease-out infinite}@keyframes dp{0%,79%{opacity:0;transform:translateY(10px)}83%{opacity:1;transform:translateY(0)}91%{opacity:1}95%{opacity:0}100%{opacity:0}}
-    .p1,.p2,.p3{opacity:0}
-    .p1{animation:p1 16s infinite}@keyframes p1{0%,4%{opacity:0}8%,24%{opacity:1}28%,100%{opacity:0}}
-    .p2{animation:p2 16s infinite}@keyframes p2{0%,28%{opacity:0}32%,48%{opacity:1}52%,100%{opacity:0}}
-    .p3{animation:p3 16s infinite}@keyframes p3{0%,52%{opacity:0}56%,74%{opacity:1}78%,100%{opacity:0}}
+    .p1,.p2,.p3,.p4{opacity:0}
+    .p1{animation:p1 16s infinite}@keyframes p1{0%,4%{opacity:0}8%,20%{opacity:1}24%,100%{opacity:0}}
+    .p2{animation:p2 16s infinite}@keyframes p2{0%,24%{opacity:0}28%,42%{opacity:1}46%,100%{opacity:0}}
+    .p3{animation:p3 16s infinite}@keyframes p3{0%,46%{opacity:0}50%,60%{opacity:1}64%,100%{opacity:0}}
+    .p4{animation:p4 16s infinite}@keyframes p4{0%,64%{opacity:0}67%,76%{opacity:1}79%,100%{opacity:0}}
     @keyframes mv0{0%,8%{transform:translate(0,0)}40%,80%{transform:translate(12px,0px)}90%,100%{transform:translate(0,0)}}
     @keyframes mv1{0%,8%{transform:translate(0,0)}40%,80%{transform:translate(348px,-2px)}90%,100%{transform:translate(0,0)}}
     @keyframes mv2{0%,8%{transform:translate(0,0)}40%,80%{transform:translate(-8px,-14px)}90%,100%{transform:translate(0,0)}}
@@ -50,8 +51,9 @@
     </g></g>
     <g text-anchor="middle" font-weight="900" font-size="11" letter-spacing="2">
       <text class="p1" x="400" y="322" fill="#1fc7dd">BUILD FROM THE BACK</text>
-      <text class="p2" x="400" y="322" fill="#1fc7dd">FULL-BACKS OVERLAP</text>
-      <text class="p3" x="400" y="322" fill="#f2c94c">INVADE THE HALF-SPACES</text>
+      <text class="p2" x="400" y="322" fill="#1fc7dd">SWITCH · PROGRESS</text>
+      <text class="p3" x="400" y="322" fill="#f2c94c">OVERLAP · ONE-TWO</text>
+      <text class="p4" x="400" y="322" fill="#f2c94c">THIRD-MAN RUNS</text>
     </g>
     <g class="depl" text-anchor="middle"><rect x="298" y="150" width="204" height="36" rx="9" fill="#0a0e1c" fill-opacity="0.88" stroke="#39d353" stroke-width="1.6"/><text x="400" y="174" font-size="20" font-weight="900" fill="#39d353" letter-spacing="2">DEPLOYED ✓</text></g>
   </g>
