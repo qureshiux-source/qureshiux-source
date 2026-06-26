@@ -1,5 +1,5 @@
 <!-- ===== HERO ===== -->
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hero.svg?v=ui5" alt="" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hero.svg?v=ui6" alt="" />
 
 <!-- ===== PLAYER ===== -->
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-player.svg?v=ui2" alt="" />
