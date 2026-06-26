@@ -1,14 +1,14 @@
 <!-- ===== HERO ===== -->
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hero.svg?v=ui4" alt="" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hero.svg?v=ui5" alt="" />
 
 <!-- ===== PLAYER ===== -->
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-player.svg?v=ui2" alt="" />
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/avatar.svg?v=3" alt="" />
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/player-panel.svg?v=ui4" alt="" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/avatar.svg?v=4" alt="" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/player-panel.svg?v=ui5" alt="" />
 
 <!-- ===== MANAGER ===== -->
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-manager.svg?v=ui2" alt="" />
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/manager-card.svg?v=ui5" alt="" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/manager-card.svg?v=ui6" alt="" />
 
 <!-- ===== STACK ===== -->
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-stack.svg?v=ui2" alt="" />
@@ -33,8 +33,8 @@
 </div>
 
 <!-- ===== HONOURS ===== -->
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-honours.svg?v=ui3" alt="" />
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/honours.svg?v=ui3" alt="" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-honours.svg?v=ui4" alt="" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/honours.svg?v=ui4" alt="" />
 
 <!-- ===== FOOTER ===== -->
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/footer.svg" alt="" />
