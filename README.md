@@ -12,7 +12,7 @@
 
 <!-- ===== STACK ===== -->
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/hdr-stack.svg?v=ui2" alt="" />
-<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/starting-xi.svg?v=7" alt="" />
+<img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/starting-xi.svg?v=8" alt="" />
 <img width="100%" src="https://raw.githubusercontent.com/qureshiux-source/qureshiux-source/main/assets/substitutes.svg?v=3" alt="" />
 
 <!-- ===== FORM & ACTIVITY ===== -->
